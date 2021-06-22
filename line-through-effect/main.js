@@ -1,15 +1,14 @@
 const text = document.getElementById("text");
-const textArr = text.innerText.split("")
+const textArr = [...text.innerText];
 
-const newEl = document.createElement("p");
-
-const randomVisibility = () => {
-  return Math.random() < 0.5 ? 'visibility: hidden' : 'visibility: visible';
+const visibilityCheck = () => {
+  return Math.random() <= 0.5 ? "visibility:hidden" : "visibility:shown";
 };
 
-newEl.innerHTML = `
-	${textArr.map(letter => `<span class="letter" style="${randomVisibility()}">${letter}</span>`).join('')}
-`;
+const newElP = document.createElement("p");
+newElP.innerHTML = `${textArr
+  .map((letter) => `<span style="${visibilityCheck()}">${letter}</span>`)
+  .join("")}`;
 
-newEl.classList.add("overlay");
-document.body.appendChild(newEl);
+newElP.classList.add('overlay')
+document.body.appendChild(newElP);
