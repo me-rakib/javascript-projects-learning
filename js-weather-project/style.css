@@ -54,6 +54,16 @@ body {
   height: auto;
 }
 
-.get-city:focus {
-  outline: 0;
+@media screen and (max-width: 576px) {
+  body{
+    overflow: visible;
+  }
+
+  .left {
+    width: 100vw;
+  }
+
+  #right {
+    width: 100vw;
+  }
 }
