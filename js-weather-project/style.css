@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Play&family=Yanone+Kaffeesatz:wght@700&display=swap");
+
+.font-yanone {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: #011936c9;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+.font-play {
+  font-family: "Play", sans-serif;
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+.color-dark-white {
+  color: #011936c6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F4FFFD;
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  height: 100vh;
+}
+
+#branding {
+  max-width: 200px;
+}
+
+#right {
+  background-color: #f9dc5c75;
+  min-height: 100vh;
+  width: 50%;
+}
+
+#condition {
+  width: 100px;
+  height: auto;
+}
+
+.get-city:focus {
+  outline: 0;
+}

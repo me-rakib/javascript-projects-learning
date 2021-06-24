@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="The weather || know your day is a weather update website which will fetch data from OpenWeather." />
+
+  <link rel="icon" href="./favicon.png" type="image/x-icon" />
+  <title>Weather || Know Your Day</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Left Side-->
+      <div class="col-6 d-flex text-capitalize left">
+        <div class="align-self-center text-center m-auto">
+          <div class="d-flex justify-content-center">
+            <div class="row">
+              <div class="col-6">
+                <img class="img-fluid" id="branding" src="./body-img.png" alt="Weather Icon" />
+              </div>
+              <div class="col-6 align-self-center">
+                <h3 class="font-yanone">
+                  <span>Open</span><br />
+                  <span>Weather</span><br />
+                  <span>API</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p class="font-play color-dark-white">
+            Allow location or Enter your city to know weather instantly
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-6 d-flex font-play color-dark-white" id="right">
+        <div class="text-center m-auto align-self-center">
+          <img id="weather-img" src="https://openweathermap.org/img/w/03d.png" id="condition"
+            alt="Weather condition image" />
+          <strong class="font-30"><span id="temp">100.00</span><span>&#176C</span></strong>
+          <p>
+            <strong>
+              <span class="font-yanone" id="city">Dhaka</span>,
+              <span id="country">BD</span></strong><br />
+            <strong><span id="main">Cloud</span>(<span id="description">Cloud</span>)</strong><br />
+            <strong>PRESSURE: <span id="pressure">1004</span>, HUMIDITY:
+              <span id="humidity"> 85</span></strong>
+          </p>
+          <input id="get-city" class="form-control get-city" placeholder="Enter your city name ie: Dhaka,BD"/>
+          <small class="form-text">After Entering a Valid City Name Please Press Enter to Get
+            Result</small>
+          <!-- 
+          <h5 class="my-4">Recently Searched Result:</h5>
+          <div></div>
+          <div></div>
+          -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-- Custom JS -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
