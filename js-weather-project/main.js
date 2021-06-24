@@ -11,12 +11,12 @@ const getCity = document.getElementById("get-city")
 
 // API Info & default location
 const API_KEY = "e4568c50f1bfbd1fba67df40937990dd"
-let BASE_URL = `http://api.openweathermap.org/data/2.5/weather?q=tangail,BD&appid=${API_KEY}`
+let BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=tangail,BD&appid=${API_KEY}`
 
 // get current location info
 window.onload = function() {
     navigator.geolocation.getCurrentPosition(success => {
-        BASE_URL = `http://api.openweathermap.org/data/2.5/weather?q=rajshahi&appid=${API_KEY}&lat=${success.coords.latitude}&lon=${success.coords.longitude}`
+        BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=rajshahi&appid=${API_KEY}&lat=${success.coords.latitude}&lon=${success.coords.longitude}`
         getData(BASE_URL)
     }, error => {
         getData(BASE_URL) 
@@ -27,7 +27,7 @@ window.onload = function() {
 getCity.addEventListener("keypress", e => {
     if (e.key == "Enter") {
         e.defaultPrevented
-        BASE_URL = `http://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${API_KEY}`
+        BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${API_KEY}`
         getData(BASE_URL)
         e.target.value = ""
     }
