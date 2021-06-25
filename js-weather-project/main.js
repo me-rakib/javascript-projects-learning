@@ -16,7 +16,7 @@ let BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=tangail,BD&app
 // get current location info
 window.onload = function() {
     navigator.geolocation.getCurrentPosition(success => {
-        BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=rajshahi&appid=${API_KEY}&lat=${success.coords.latitude}&lon=${success.coords.longitude}`
+        BASE_URL = `https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&lat=${success.coords.latitude}&lon=${success.coords.longitude}`
         getData(BASE_URL)
     }, error => {
         getData(BASE_URL) 
