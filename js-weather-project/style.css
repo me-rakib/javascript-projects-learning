@@ -31,7 +31,7 @@
 
 body {
   background-color: #F4FFFD;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .left {
