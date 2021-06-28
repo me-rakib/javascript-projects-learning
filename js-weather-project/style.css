@@ -54,6 +54,15 @@ body {
   height: auto;
 }
 
+.text-left {
+  text-align: left !important;
+}
+
+#history-main {
+  display: none;
+}
+
+
 @media screen and (max-width: 576px) {
   body{
     overflow: visible;

@@ -47,7 +47,7 @@
       </div>
 
       <!-- Right Side -->
-      <div class="col-12 col-sm-6 d-flex font-play color-dark-white" id="right">
+      <div class="py-5 col-12 col-sm-6 d-flex font-play color-dark-white" id="right">
         <div class="text-center m-auto align-self-center">
           <img id="weather-img" src="https://openweathermap.org/img/w/03d.png" id="condition"
             alt="Weather condition image" />
@@ -60,14 +60,40 @@
             <strong>PRESSURE: <span id="pressure">1004</span>, HUMIDITY:
               <span id="humidity"> 85</span></strong>
           </p>
-          <input id="get-city" class="form-control get-city" placeholder="Enter your city name ie: Dhaka,BD"/>
+          <input id="get-city" class="form-control get-city" placeholder="Enter your city name ie: Dhaka,BD" />
           <small class="form-text">After Entering a Valid City Name Please Press Enter to Get
             Result</small>
-          <!-- 
+
           <h5 class="my-4">Recently Searched Result:</h5>
-          <div></div>
-          <div></div>
-          -->
+
+          <div id="history">
+
+          </div>
+
+          <div id="history-main" class="card py-3 px-5 mb-2">
+            <div class="d-flex">
+              <div>
+                <img class="weather-condition" src="./favicon.png" alt="weather condition image">
+              </div>
+              <div class="text-left">
+                <p class="ms-3 m-0">
+                  <strong>
+                    <span class="city">Dhaka</span>,
+                    <span class="country">BD</span>
+                  </strong><br>
+                  <stong>
+                    <span class="main">Clouds</span>
+                    (<span class="description">broken clouds</span>)
+                  </stong><br>
+                  <strong>
+                    Temperature: <span class="temp">24</span>
+                    Pressure: <span class="pressure">1004</span>
+                    Humidity: <span class="humidity">72</span>
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
