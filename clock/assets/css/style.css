@@ -5,7 +5,7 @@
 :root {
 
     /*===== Colors =====*/
-    --hue-color: 240;
+    --hue-color: 25;
     /*Red 0 - Green 120 - Blue 240 */
 
     --first-color: hsl(var(--hue-color), 53%, 49%);
