@@ -1,0 +1,37 @@
+/* ========= VARIABLE CSS ========= */
+:root {
+    --background-color: #E8EDDF;
+    --icon-color: #242423;
+    --icon-background: #F5CB5C;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+}
+
+.theme__icon i{
+    color: var(--icon-color);
+    font-size: 50px;
+    background: var(--icon-background);
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+}
+
+body.dark-theme {
+    --background-color: #264653;
+    --icon-color: #E9C46A;
+    --icon-background: #E76F51;
+}
