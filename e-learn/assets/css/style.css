@@ -1,0 +1,191 @@
+/* ========== GOOGLE FONT ========== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+/* ========== VARIABLE CSS ========== */
+:root {
+    /* ===== Color ===== */
+    --button-color: #FF3D00;
+    --text-color: #fff;
+
+    /* ===== Font & Typography */
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-regular: 400;
+    --font-medium: 500;
+
+    --button-border-radius: 2px;
+}
+
+/* ========== BASE ========== */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    font-family: var(--font-montserrat);
+    color: var(--text-color);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+/* ========== REUSEABLE CSS CLASS ========== */
+.section {
+    padding: 1rem 5rem;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border-radius: var(--button-border-radius);
+    padding: .5rem 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: var(--button-border-radius);
+}
+
+/* ========== HEADER ========== */
+.section__header {
+    height: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section__logo {
+    width: 120px;
+}
+
+.section__nav {
+    column-gap: 1.5rem;
+    align-items: center;
+}
+
+.section__nav a {
+    color: var(--text-color);
+    position: relative;
+}
+
+.section__nav .nav__link:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--button-color);
+    top: 120%;
+    left: 0;
+    transition: width .3s;
+}
+
+.section__nav .nav__link:hover:after {
+    width: 100%;
+}
+
+
+/* ========== HOME ========== */
+.home__background {
+    position: relative;
+    height: 100%;
+}
+
+.home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    row-gap: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+.home__text h2 {
+    font-size: 3.5rem;
+    font-weight: var(--font-medium);
+}
+
+.home__search {
+    justify-content: center;
+}
+
+.home__form {
+    width: 60%;
+    position: relative;
+    align-items: center;
+}
+
+.home__form i,
+.home__form input,
+.home__form a {
+    position: absolute;
+}
+
+
+.home__form i {
+    left: 0;
+    color: #000;
+    z-index: 1;
+    left: 5px;
+}
+
+.home__form input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+
+.home__form a {
+    right: 5px;
+}
+
+.home__icon {
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.home__icon div {
+    background: #ff3c0070;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home__icon img {
+    width: 1.5rem;
+}
+
+.home__icon p {
+    font-size: .6rem;
+}
+
+.back-video {
+    z-index: -100;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
