@@ -80,6 +80,7 @@ header > h1 {
 img{
     width: 40px;
     height: 40px;
+    outline: none;
 }
 
 #action-message {
