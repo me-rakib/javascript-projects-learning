@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+
+    <!-- ========== CSS ========== -->
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <!-- ========== SCORE BOARD ========== -->
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div>
+        <div id="computer-label" class="badge">comp</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+
+    <!-- ========== RESULT ========== -->
+    <div class="result">
+        <p>Paper covers rock. You win!</p>
+    </div>
+
+    <!-- ========== SELECT CHOICE ========== -->
+    <div class="choices">
+        <div class="choice" id="r">
+            <img src="./images/rock.svg">
+        </div>
+        <div class="choice" id="p">
+            <img src="./images/paper.svg">
+        </div>
+        <div class="choice" id="s">
+            <img src="./images/scissors.svg" alt="Logo" class="logo-img">
+        </div>
+    </div>
+
+    <!-- ========== ACTION MESSAGE ========== -->
+    <p id="action-message">Make your move.</p>
+
+    <script src="./app.js"></script>
+
+</body>
+</html>
