@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+
+  <!-- ========== BOX ICON ========== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- ========== CSS ========== -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+
+      <div class="nav__main flex">
+        <div class="nav__title flex">
+          <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+          </div>
+          <a class="nav__title-text" href="#">sneakers</a>
+        </div>
+
+        <div class="nav__menu flex" id="nav-menu">
+          <ul class="nav__list flex">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Collections</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Men</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Women</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Contacts</a>
+            </li>
+
+            <i class='bx bx-x nav__close' id="nav-close"></i>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav__cart flex">
+        <i class='bx bx-cart-alt'></i>
+        <img class="nav__cart-avatar" src="./assets/img/image-avatar.png">
+      </div>
+
+    </nav>
+  </header>
+
+  <section class="slider">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-1.jpg"></div>
+        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-2.jpg"></div>
+        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-3.jpg"></div>
+        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-4.jpg"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h3 class="home__subtitle">Sneaker Company</h3>
+    <h2 class="home__title">Fall Limited Edition Sneakers</h2>
+    <p class="home__text">
+      These low-profile sneakers are your perfect casual wear compaion. Featuring a durable rubber outer sole, they'll
+      withstand everything the weather can offer.
+    </p>
+    <div class="home__price flex">
+      <div class="home__price-now flex">
+        <h1>$125.00</h1>
+        <p>50%</p>
+      </div>
+      <p class="home__price-prev">$250.00</p>
+    </div>
+
+    <div class="home__total">
+      <div class="home__tatal-inner flex">
+        <i class='bx bx-minus'></i>
+        <p>0</p>
+        <i class='bx bx-plus'></i>
+      </div>
+    </div>
+
+    <div class="home__add__to flex">
+      <i class='bx bx-cart-alt' ></i>
+      <p>Add to cart</p>
+    </div>
+  </section>
+
+
+  <!-- ========== Splide ========== -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+    });
+  </script>
+
+  <!-- ========== JS ========== -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

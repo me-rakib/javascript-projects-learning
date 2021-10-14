@@ -1,0 +1,299 @@
+/* ========== Google fonts ========== */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* ========== Variables CSS ========== */
+:root {
+    --header-height: 3rem;
+
+    /* ===== Colors ===== */
+    --color-orange: hsl(26, 100%, 55%);
+    --color-pale-orange: hsl(25, 100%, 94%);
+    --color-very-dark-blue: hsl(220, 13%, 13%);
+    --color-dark-grayish-blue: hsl(219, 9%, 45%);
+    --color-grayish-blue: hsl(220, 14%, 75%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 0%);
+
+    /* ===== Font Size ===== */
+    --font-kumbh: 'Kumbh Sans', sans-serif;
+    --font-size-body: 16px;
+
+    /* ===== Font weight ===== */
+    --font-normal: 400;
+    --font-bold: 700;
+
+    /* ===== Margin ===== */
+    --mb-1: 1rem;
+
+    /* ===== z-index ===== */
+    --z-fixed: 100;
+}
+
+/* ========== BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--font-kumbh);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ========== Reuseable CSS classes ========== */
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.flex {
+    display: flex;
+    column-gap: .5rem;
+}
+
+/* ========== header ========== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: var(--color-white);
+}
+
+/* ========== Nav ========== */
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__main {
+    align-items: center;
+}
+
+.nav__title {
+    top: 0;
+    align-items: center;
+}
+
+.nav__title-text {
+    font-size: 1.5rem;
+    margin-top: -8px;
+    color: var(--color-black);
+    font-weight: var(--font-bold);
+}
+
+.nav__cart {
+    align-items: center;
+}
+
+.nav__cart-avatar {
+    width: 1.5rem;
+}
+
+.nav__menu {
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: rgba(0, 0, 0, .6);
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease;
+    }
+
+    .nav__list {
+        width: 70%;
+        background: var(--color-white);
+        flex-direction: column;
+        row-gap: .5rem;
+        padding: 3rem 1rem;
+    }
+}
+
+.nav__link {
+    color: var(--color-black);
+    font-weight: var(--font-bold);
+}
+
+.nav__close {
+    position: absolute;
+    top: .75rem;
+    left: .5rem;
+    color: var(--color-dark-grayish-blue)
+}
+
+.show-menu {
+    left: 0;
+}
+
+
+/* ========== Splide ========== */
+.slider {
+    width: 100%;
+    height: 270px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+}
+
+
+
+.home__subtitle
+{
+    margin: 1rem 0;
+    color: var(--color-orange);
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.home__title {
+    margin: 0 0 1rem 0;
+    font-weight: var(--font-bold);
+    font-size: 2rem;
+}
+
+.home__text{
+    color: var(--color-dark-grayish-blue);
+    line-height: 1.5;
+}
+
+.home__price {
+    margin: 1rem 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__price-now{
+    column-gap: 1.5rem;
+    align-items: center;
+}
+
+.home__price-now h1 {
+    font-weight: var(--font-bold);
+    font-size: 2rem;
+}
+
+.home__price-now p {
+    background: var(--color-pale-orange);
+    padding: 5px 10px;
+    color: var(--color-orange);
+    font-weight: var(--font-bold);
+    border-radius: 5px;
+}
+
+.home__price-prev
+{
+    text-decoration: line-through;
+    color: var(--color-grayish-blue);
+    font-weight: var(--font-bold);
+}
+
+.home__total {
+    margin: 1rem 0;
+    background: var(--color-pale-orange);
+    border-radius: 10px;
+}
+
+.home__tatal-inner {
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    font-weight: var(--font-bold);
+    align-items: center;
+}
+
+.home__tatal-inner i{
+    color: var(--color-orange);
+    font-weight: var(--font-bold);
+}
+
+.home__add__to{
+    justify-content: center;
+    background: var(--color-orange);
+    color: var(--color-white);
+    padding: 1rem 0;
+    border-radius: 10px;
+    font-weight: var(--font-bold);
+    margin: 0 0 1rem 0;
+}
