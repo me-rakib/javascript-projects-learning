@@ -54,7 +54,8 @@
       </div>
 
       <div class="nav__cart flex">
-        <i class='bx bx-cart-alt'></i>
+        <i class='bx bx-cart-alt' id="cart-icon"></i>
+        <span id="cart-total">0</span>
         <img class="nav__cart-avatar" src="./assets/img/image-avatar.png">
       </div>
 
@@ -90,15 +91,24 @@
 
     <div class="home__total">
       <div class="home__tatal-inner flex">
-        <i class='bx bx-minus'></i>
-        <p>0</p>
-        <i class='bx bx-plus'></i>
+        <i class='bx bx-minus' id="cart-minus"></i>
+        <p id="cart-val">0</p>
+        <i class='bx bx-plus' id="cart-plus"></i>
       </div>
     </div>
 
-    <div class="home__add__to flex">
+    <div class="home__add__to flex" id="add-to-cart">
       <i class='bx bx-cart-alt' ></i>
       <p>Add to cart</p>
+    </div>
+  </section>
+
+  <!-- ========== Cart ========== -->
+  <section class="cart" id="cart">
+    <p class="cart__title">Cart</p>
+    <hr class="cart__hr">
+    <div class="cart__container">
+      <p class="cart__empty">Your cart is empty</p>
     </div>
   </section>
 

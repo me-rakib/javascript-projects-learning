@@ -117,6 +117,20 @@ i {
 
 .nav__cart {
     align-items: center;
+    position: relative;
+}
+
+#cart-total {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    left: 8px;
+    background: var(--color-orange);
+    border-radius: 100%;
+    color: var(--color-white);
+    text-align: center;
+    font-size: 12px;
 }
 
 .nav__cart-avatar {
@@ -289,6 +303,7 @@ i {
 }
 
 .home__add__to{
+    cursor: pointer;
     justify-content: center;
     background: var(--color-orange);
     color: var(--color-white);
@@ -296,4 +311,42 @@ i {
     border-radius: 10px;
     font-weight: var(--font-bold);
     margin: 0 0 1rem 0;
+}
+
+/* ========== cart ========= */
+.cart
+{
+    width: 90%;
+    height: 150px;
+    background: var(--color-white);
+    position: fixed;
+    top: -120%;
+    z-index: 1;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all .3s ease;
+}
+
+.cart__title {
+    height: 25%;
+    padding: .5rem 1rem;
+    font-weight: var(--font-bold);
+}
+
+.cart__hr{
+    border-color: rgba(0,0,0,.1)
+}
+
+.cart__container {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-cart 
+{
+    top: 4rem;
 }
