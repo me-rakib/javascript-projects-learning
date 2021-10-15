@@ -62,45 +62,49 @@
     </nav>
   </header>
 
-  <section class="slider">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-1.jpg"></div>
-        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-2.jpg"></div>
-        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-3.jpg"></div>
-        <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-4.jpg"></div>
+  <section class="home__section container">
+    <section class="slider">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-1.jpg"></div>
+          <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-2.jpg"></div>
+          <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-3.jpg"></div>
+          <div class="swiper-slide swiper__size"><img src="./assets/img/image-product-4.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="container">
-    <h3 class="home__subtitle">Sneaker Company</h3>
-    <h2 class="home__title">Fall Limited Edition Sneakers</h2>
-    <p class="home__text">
-      These low-profile sneakers are your perfect casual wear compaion. Featuring a durable rubber outer sole, they'll
-      withstand everything the weather can offer.
-    </p>
-    <div class="home__price flex">
-      <div class="home__price-now flex">
-        <h1>$125.00</h1>
-        <p>50%</p>
+    <section class="container">
+      <h3 class="home__subtitle">Sneaker Company</h3>
+      <h2 class="home__title">Fall Limited Edition Sneakers</h2>
+      <p class="home__text">
+        These low-profile sneakers are your perfect casual wear compaion. Featuring a durable rubber outer sole, they'll
+        withstand everything the weather can offer.
+      </p>
+      <div class="home__price flex">
+        <div class="home__price-now flex">
+          <h1>$125.00</h1>
+          <p>50%</p>
+        </div>
+        <p class="home__price-prev">$250.00</p>
       </div>
-      <p class="home__price-prev">$250.00</p>
-    </div>
 
-    <div class="home__total">
-      <div class="home__tatal-inner flex">
-        <i class='bx bx-minus' id="cart-minus"></i>
-        <p id="cart-val">0</p>
-        <i class='bx bx-plus' id="cart-plus"></i>
+      <div class="home__total">
+        <div class="home__tatal-inner flex">
+          <i class='bx bx-minus' id="cart-minus"></i>
+          <p id="cart-val">0</p>
+          <i class='bx bx-plus' id="cart-plus"></i>
+        </div>
       </div>
-    </div>
 
-    <div class="home__add__to flex" id="add-to-cart">
-      <i class='bx bx-cart-alt'></i>
-      <p>Add to cart</p>
-    </div>
+      <div class="home__add__to flex" id="add-to-cart">
+        <i class='bx bx-cart-alt'></i>
+        <p>Add to cart</p>
+      </div>
+    </section>
+
+
   </section>
 
   <!-- ========== Cart ========== -->
@@ -108,13 +112,14 @@
     <p class="cart__title">Cart</p>
     <hr class="cart__hr">
     <div class="cart__container">
-       <p class="cart__empty">Your cart is empty</p>
+      <p class="cart__empty">Your cart is empty</p>
       <div class="cart__not-empty">
         <div class="cart__img-container flex">
           <img class="cart__img" src="./assets/img/image-product-1-thumbnail.jpg">
           <div class="cart__img-text">
             <p>Autumn Limited Edition</p>
-            <p><span>$125.00 x <span class="cart__total-item">0</span> </span><span id="cart__item-total-sign">$<span class="cart__total-price" id="cart__item-total">0</span></p>
+            <p><span>$125.00 x <span class="cart__total-item">0</span> </span><span id="cart__item-total-sign">$<span
+                  class="cart__total-price" id="cart__item-total">0</span></p>
           </div>
           <i class='bx bx-cylinder' id="cart__delete"></i>
         </div>

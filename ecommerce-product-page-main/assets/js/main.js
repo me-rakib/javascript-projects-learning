@@ -80,7 +80,10 @@ addToCart.addEventListener("click", () => {
 
 cartDelete.addEventListener("click", () => {
   if (cartVal > 0) {
-    cartNotEmpty.remove();
+    cartNotEmpty.style.display = "none";
     cartEmpty.style.display = "block";
+    cartVal = 0;
+    cartTotal.innerText = cartVal;
+    cartCurrentVal.innerText = 0;
   }
 });
