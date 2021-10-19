@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========== BOX ICON =========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- ========== CSS =========== -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Calculator app</title>
+</head>
+
+<body>
+    <section class="calc container">
+        <div class="calc__header flex">
+            <h2>calc</h2>
+            <div class="calc__header-theme flex">
+                <p>Theme</p>
+                <i class='bx bxs-moon' id="theme-button"></i>
+            </div>
+        </div>
+
+        <div class="calc__output flex">
+            <span id="calc__output-show">0</span>
+        </div>
+
+        <div class="calc__keys grid">
+            <button class="btn">(</button>
+            <button class="btn">)</button>
+            <button class="btn">&pi;</button>
+            <button class="btn btn__del">DEL</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">^</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">+</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">-</button>
+            <button class="btn">.</button>
+            <button class="btn">0</button>
+            <button class="btn">/</button>
+            <button class="btn">x</button>
+            <button class="btn btn__reset">RESET</button>
+            <button class="btn btn__equal">=</button>
+        </div>
+    </section>
+    <script src="./main.js"></script>
+</body>
+
+</html>
