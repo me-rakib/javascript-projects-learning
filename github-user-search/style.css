@@ -1,0 +1,76 @@
+/* ========== Google Fonts ========== */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700&display=swap');
+
+/* ========== Variables CSS ========== */
+:root {
+    /* ===== Color ===== */
+    --body-color: #F5F8FF;
+
+    /* ===== Fonts and typography ===== */
+    --body-font: 'Exo', sans-serif;
+
+    /* ===== Font weight ===== */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+
+    /* ===== */
+    /* ===== Margin ===== */
+    --mb-0-5: .5rem;
+
+}
+
+/* ========== Variable For Dark Theme =========== */
+
+/* ========== Base ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-light);
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ========== Reuseable CSS classes ========= */
+.container
+{
+    padding: 1rem 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* ========== Title ========== */
+.head__title{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head__title-theme {
+    font-size: 12px;
+}
+
+#theme-button {
+    margin-left: .5rem;
+}
