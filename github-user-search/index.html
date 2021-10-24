@@ -22,72 +22,67 @@
         <section class="head__title flex">
             <h1 class="head__title-text">devfinder</h1>
             <div class="head__title-theme">
-                <span>LIGHT</span>
+                <span>DARK</span>
                 <i class='bx bxs-moon' id="theme-button"></i>
             </div>
         </section>
 
         <!-- ========== Search ========== -->
-        <section>
-            <div>
-                <i class='bx bx-search'></i>
-                <button>Search</button>
-            </div>
-            <input type="text" placeholder="Search GitHub username... ">
+        <section class="search">
+            <i class='search__icon bx bx-search'></i>
+            <input class="search__box" type="text" placeholder="Search GitHub username... ">
+            <button class="search__btn">Search</button>
         </section>
 
         <!-- ========== Profile Section ========== -->
-        <section>
-            <div>
-                <img>
-
-                <div>
-                    <h2>The Octocat</h2>
-                    <p>@<span>octocat</span></p>
+        <section class="profile">
+            <section class="profile__info flex">
+                <img class="profile__avatar" src="./avatar.jpg">
+                <div class="profile__title">
+                    <h2>Rakib Hasan</h2>
+                    <p class="profile__user">@<span>me-rakib</span></p>
+                    <p class="profile__join">Joined <span>25 Jan 2011</span></p>
                 </div>
+            </section>
 
-                <p>Joined <span>25 Jan 2011</span></p>
+            <p class="profile__bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex vitae adipisci id sunt quia
+                accusantium.
+            </p>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex vitae adipisci id sunt quia
-                    accusantium.
-                </p>
-
+            <div class="profile__data flex">
                 <div>
-                    <div>
-                        <p>Repos</p>
-                        <span>8</span>
-                    </div>
-                    <div>
-                        <p>Followers</p>
-                        <span>3938</span>
-                    </div>
-                    <div>
-                        <p>Following</p>
-                        <span>9</span>
-                    </div>
+                    <p>Repos</p>
+                    <span>8</span>
                 </div>
-
                 <div>
+                    <p>Followers</p>
+                    <span>3938</span>
+                </div>
+                <div>
+                    <p>Following</p>
+                    <span>9</span>
+                </div>
+            </div>
+
+            <section class="profile__professional grid">
+                <div class="flex col-gap">
                     <i class='bx bx-current-location'></i>
                     <p>San Francisco</p>
                 </div>
-
-                <div>
+                <div class="flex col-gap">
                     <i class='bx bx-link'></i>
                     <p>https://github.blog</p>
                 </div>
-
-                <div>
+                <div class="flex col-gap">
                     <i class='bx bxl-twitter'></i>
                     <p>Not Available</p>
                 </div>
-
-                <div>
+                <div class="flex col-gap">
                     <i class='bx bxs-buildings'></i>
                     <p>@<span>agithuv</span></p>
                 </div>
-            </div>
+            </section>
         </section>
     </div>
 

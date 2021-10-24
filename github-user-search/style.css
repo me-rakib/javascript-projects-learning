@@ -5,6 +5,11 @@
 :root {
     /* ===== Color ===== */
     --body-color: #F5F8FF;
+    --search-box-color: #FEFEFC;
+    --btn-bg-color: #0477FE;
+    --btn-txt-color: #f0f4f5;
+    --search-icon-color: #4B6A9B;
+    --search-box-text-color: #2B3442;
 
     /* ===== Fonts and typography ===== */
     --body-font: 'Exo', sans-serif;
@@ -18,6 +23,8 @@
     /* ===== */
     /* ===== Margin ===== */
     --mb-0-5: .5rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
 
 }
 
@@ -32,6 +39,8 @@
 }
 
 body {
+    width: 100%;
+    height: 100vh;
     background-color: var(--body-color);
     font-family: var(--body-font);
     font-weight: var(--font-light);
@@ -47,6 +56,11 @@ button {
     cursor: pointer;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 /* ========== Reuseable CSS classes ========= */
 .container
 {
@@ -57,6 +71,11 @@ button {
     display: flex;
 }
 
+.col-gap {
+    gap: .5rem;
+    align-items: center;
+}
+
 .grid {
     display: grid;
 }
@@ -65,12 +84,133 @@ button {
 .head__title{
     justify-content: space-between;
     align-items: center;
+    margin-bottom: var(--mb-1-25);
+}
+
+.head__title-text {
+    color: #2B3442;
 }
 
 .head__title-theme {
     font-size: 12px;
+    color: #4B6A9B;
+    font-size: 12px;
+    font-weight: var(--font-regular);
 }
 
 #theme-button {
     margin-left: .5rem;
+}
+
+/* ========== Search =========== */
+.search
+{
+    position: relative;
+}
+
+.search__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 .5rem;
+    color: var(--search-icon-color);
+    font-size: 25px;
+    font-weight: var(--font-bold);
+}
+
+.search__box {
+    width: 100%;
+    padding: 1rem 6rem 1rem 2.5rem;
+    background-color: var(--search-box-color);
+    border-radius: 10px;
+    color: var(--search-box-text-color);
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.2);
+}
+
+.search__btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+    font-weight: var(--font-bold);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* ========== Profile ========== */
+.profile {
+    margin-top: var(--mb-1);
+    border-radius: 10px;
+    background-color: #FEFEFE;
+    padding: 1.5rem 1rem;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.2);
+}
+
+.profile__info {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: var(--mb-1);
+}
+
+.profile__avatar {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile__title h2{
+    color: #2B3442;
+}
+
+.profile__user{
+    color: #0079ff;
+    font-size: 14px;
+    font-weight: var(--font-medium);
+}
+
+.profile__join {
+    color: #4B6A9B;
+    font-size: 14px;
+}
+
+.profile__bio {
+    text-align: justify;
+    line-height: 1.5rem;
+    color: #4B6A9B;
+    font-size: 14px;
+    font-weight: var(--font-regular);
+}
+
+.profile__data {
+    justify-content: space-between;
+    text-align: center;
+    margin: var(--mb-1);
+    background-color: #F5F8FF;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #4B6A9B;
+}
+
+.profile__data div p {
+    font-size: 14px;
+}
+
+.profile__data div span {
+    color: #2B3442;
+    font-weight: var(--font-bold);
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+.profile__professional {
+    grid-template-rows: repeat(4, 1fr);
+    gap: .7rem 0;
+    color:  #2B3442;
+}
+
+.profile__professional div p {
+    color: #4B6A9B;
+    font-size: 14px;
+    font-weight: var(--font-regular);
 }
