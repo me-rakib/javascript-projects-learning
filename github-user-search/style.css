@@ -184,7 +184,7 @@ img{
 .profile__data {
     justify-content: space-between;
     text-align: center;
-    margin: var(--mb-1);
+    margin: var(--mb-1) 0;
     background-color: #F5F8FF;
     border-radius: 10px;
     padding: 1rem;
