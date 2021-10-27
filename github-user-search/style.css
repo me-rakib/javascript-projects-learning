@@ -4,11 +4,14 @@
 /* ========== Variables CSS ========== */
 :root {
     /* ===== Color ===== */
-    --body-color: #F5F8FF;
+    --body-color: #141C2F;
+    --body-container: #1F2A48;
     --search-box-color: #FEFEFC;
-    --text-color: #2B3442;
-    --text-color-alt: #4B6A9B;
+    --text-color: #fff;
+    --text-color-alt: #fff;
     --btn-bg-color: #0477FE;
+
+
 
     /* ===== Fonts and typography ===== */
     --body-font: 'Exo', sans-serif;
@@ -28,6 +31,13 @@
 }
 
 /* ========== Variable For Dark Theme =========== */
+body.dark-theme {
+    --body-color: #F5F8FF;
+    --body-container: #FEFEFE;
+    --text-color: #2B3442;
+    --text-color-alt: #4B6A9B;
+    --btn-bg-color: #0477FE;
+}
 
 /* ========== Base ========== */
 * {
@@ -55,14 +65,13 @@ button {
     cursor: pointer;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
 }
 
 /* ========== Reuseable CSS classes ========= */
-.container
-{
+.container {
     padding: 1rem 1.5rem;
 }
 
@@ -80,7 +89,7 @@ img{
 }
 
 /* ========== Title ========== */
-.head__title{
+.head__title {
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--mb-1-25);
@@ -102,8 +111,7 @@ img{
 }
 
 /* ========== Search =========== */
-.search
-{
+.search {
     position: relative;
 }
 
@@ -120,10 +128,10 @@ img{
 .search__box {
     width: 100%;
     padding: 1rem 6rem 1rem 2.5rem;
-    background-color: var(--search-box-color);
+    background-color: var(--body-container);
     border-radius: 10px;
     color: var(--text-color);
-    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
 }
 
 .search__btn {
@@ -132,7 +140,7 @@ img{
     top: 50%;
     transform: translateY(-50%);
     background: var(--btn-bg-color);
-    color: var(--body-color);
+    color: #F5F8FF;
     font-weight: var(--font-bold);
     padding: 1rem;
     border-radius: 10px;
@@ -142,9 +150,9 @@ img{
 .profile {
     margin-top: var(--mb-1);
     border-radius: 10px;
-    background-color: #FEFEFE;
+    background-color: var(--body-container);
     padding: 1.5rem 1rem;
-    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
 }
 
 .profile__info {
@@ -154,15 +162,15 @@ img{
 }
 
 .profile__avatar {
-    width: 100px;
+    width: 15%;
     border-radius: 50%;
 }
 
-.profile__title h2{
+.profile__title h2 {
     color: var(--text-color);
 }
 
-.profile__user{
+.profile__user {
     color: var(--btn-bg-color);
     font-size: 14px;
     font-weight: var(--font-medium);
@@ -185,7 +193,7 @@ img{
     justify-content: space-between;
     text-align: center;
     margin: var(--mb-1) 0;
-    background-color: #F5F8FF;
+    background-color: var(--body-color);
     border-radius: 10px;
     padding: 1rem;
     color: var(--text-color-alt);
@@ -205,11 +213,52 @@ img{
 .profile__professional {
     grid-template-rows: repeat(4, 1fr);
     gap: .7rem 0;
-    color:  var(--text-color);
+    color: var(--text-color);
 }
 
 .profile__professional div p {
     color: var(--text-color-alt);
     font-size: 14px;
     font-weight: var(--font-regular);
+}
+
+/* ========== Media Queries ========== */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 750px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .profile__info {
+        position: relative;
+    }
+
+    .profile__join {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .profile__bio {
+        position: relative;
+        width: 85%;
+        left: 15%;
+    }
+
+    .profile__data {
+        width: 85%;
+        position:relative;
+        left: 15%;
+    }
+
+    .profile__professional {
+        width: 85%;
+        position: relative;
+        left: 15%;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
