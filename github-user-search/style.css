@@ -53,6 +53,9 @@ body {
     background-color: var(--body-color);
     font-family: var(--body-font);
     font-weight: var(--font-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input,
@@ -226,10 +229,6 @@ img {
 @media screen and (min-width: 768px) {
     .container {
         width: 750px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .profile__info {
