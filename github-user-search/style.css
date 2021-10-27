@@ -162,7 +162,7 @@ img {
 }
 
 .profile__avatar {
-    width: 15%;
+    width: 100px;
     border-radius: 50%;
 }
 
@@ -236,6 +236,10 @@ img {
         position: relative;
     }
 
+    .profile__avatar {
+        width: 15%;
+    }
+    
     .profile__join {
         position: absolute;
         top: 0;
@@ -244,20 +248,20 @@ img {
     
     .profile__bio {
         position: relative;
-        width: 85%;
-        left: 15%;
+        width: calc(85% - 1rem);
+        left: calc(15% + 1rem);
     }
 
     .profile__data {
-        width: 85%;
-        position:relative;
-        left: 15%;
+        position: relative;
+        width: calc(85% - 1rem);
+        left: calc(15% + 1rem);
     }
 
     .profile__professional {
-        width: 85%;
         position: relative;
-        left: 15%;
+        width: calc(85% - 1rem);
+        left: calc(15% + 1rem);
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
     }
