@@ -47,8 +47,6 @@ body.dark-theme {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     background-color: var(--body-color);
     font-family: var(--body-font);
     font-weight: var(--font-light);
