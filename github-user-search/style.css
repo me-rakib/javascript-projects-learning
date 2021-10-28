@@ -4,11 +4,10 @@
 /* ========== Variables CSS ========== */
 :root {
     /* ===== Color ===== */
-    --body-color: #141C2F;
-    --body-container: #1F2A48;
-    --search-box-color: #FEFEFC;
-    --text-color: #fff;
-    --text-color-alt: #fff;
+    --body-color: #F5F8FF;
+    --body-container: #FEFEFE;
+    --text-color: #2B3442;
+    --text-color-alt: #4B6A9B;
     --btn-bg-color: #0477FE;
 
 
@@ -32,10 +31,10 @@
 
 /* ========== Variable For Dark Theme =========== */
 body.dark-theme {
-    --body-color: #F5F8FF;
-    --body-container: #FEFEFE;
-    --text-color: #2B3442;
-    --text-color-alt: #4B6A9B;
+    --body-color: #141C2F;
+    --body-container: #1F2A48;
+    --text-color: #fff;
+    --text-color-alt: #fff;
     --btn-bg-color: #0477FE;
 }
 
@@ -76,6 +75,7 @@ img {
 /* ========== Reuseable CSS classes ========= */
 .container {
     padding: 1rem 1.5rem;
+    min-width: 400px;
 }
 
 .flex {
@@ -111,6 +111,10 @@ img {
 
 #theme-button {
     margin-left: .5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 100%;
+    padding: .1rem;
+    cursor: pointer;
 }
 
 /* ========== Search =========== */
@@ -171,17 +175,18 @@ img {
 
 .profile__title h2 {
     color: var(--text-color);
+    font-size: 20px;
 }
 
 .profile__user {
     color: var(--btn-bg-color);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: var(--font-medium);
 }
 
 .profile__join {
     color: var(--text-color-alt);
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .profile__bio {
