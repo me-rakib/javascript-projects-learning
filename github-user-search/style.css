@@ -75,7 +75,7 @@ img {
 /* ========== Reuseable CSS classes ========= */
 .container {
     padding: 1rem 1.5rem;
-    min-width: 400px;
+    min-width: 350px;
 }
 
 .flex {
