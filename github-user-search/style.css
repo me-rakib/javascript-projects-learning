@@ -52,7 +52,6 @@ body {
     background-color: var(--body-color);
     font-family: var(--body-font);
     font-weight: var(--font-light);
-    border: 10px solid red;
     position: relative;
 }
 
