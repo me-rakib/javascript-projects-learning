@@ -48,7 +48,7 @@ body.dark-theme {
 
 body {
     width: 100%;
-    min-height: 100vh;
+    min-height: 650px;
     background-color: var(--body-color);
     font-family: var(--body-font);
     font-weight: var(--font-light);
