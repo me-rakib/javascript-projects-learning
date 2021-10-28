@@ -48,7 +48,7 @@ body.dark-theme {
 
 body {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: var(--body-color);
     font-family: var(--body-font);
     font-weight: var(--font-light);
@@ -233,11 +233,11 @@ img {
 }
 
 /* ========== Media Queries ========== */
-/* @media screen and (max-width: 567px) {
+@media screen and (max-width: 567px) {
     body {
         min-height: 650px;
     }
-} */
+}
 
 @media screen and (min-width: 568px) {
     .container {
