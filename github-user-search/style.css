@@ -52,10 +52,6 @@ body {
     background-color: var(--body-color);
     font-family: var(--body-font);
     font-weight: var(--font-light);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 }
 
@@ -233,6 +229,20 @@ img {
 }
 
 /* ========== Media Queries ========== */
+@media screen and (min-width: 568px) {
+    body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        min-width: 500px;
+    }
+}
+
+
 @media screen and (min-width: 768px) {
     .container {
         width: 750px;
@@ -245,13 +255,13 @@ img {
     .profile__avatar {
         width: 15%;
     }
-    
+
     .profile__join {
         position: absolute;
         top: 0;
         right: 0;
     }
-    
+
     .profile__bio {
         position: relative;
         width: calc(85% - 1rem);
