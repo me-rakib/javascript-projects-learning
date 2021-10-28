@@ -33,7 +33,7 @@ const getData = () => {
   axios
     .get(`${baseURL}${userName}`)
     .then((response) => printData(response.data))
-    .catch((error) => console.log(error));
+    .catch((error) => alert(`${userName} is not a valid user id.`));
 };
 
 const printData = (data) => {
