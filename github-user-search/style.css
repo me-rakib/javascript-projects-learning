@@ -53,6 +53,7 @@ body {
     font-family: var(--body-font);
     font-weight: var(--font-light);
     border: 10px solid red;
+    position: relative;
 }
 
 input,
