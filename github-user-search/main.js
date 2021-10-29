@@ -135,6 +135,7 @@ getData();
 
 // ========== Light / Dark Theme ==========
 const themeButton = document.getElementById("theme-button");
+const themeName = document.getElementById("theme-name");
 const darkTheme = "dark-theme";
 const iconTheme = "bxs-sun";
 
@@ -147,6 +148,7 @@ const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "bxs-moon" : "bxs-sun";
+
 if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
@@ -154,12 +156,19 @@ if (selectedTheme) {
   themeButton.classList[selectedIcon === "bxs-moon" ? "add" : "remove"](
     iconTheme
   );
+  themeName.innerText = `${selectedTheme === "dark" ? "Dark" : "Light"}`;
 }
 
 // select theme manually
 themeButton.addEventListener("click", () => {
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
+
+  if (document.body.classList.contains(darkTheme)) {
+    themeName.innerText = "Dark";
+  } else {
+    themeName.innerText = "Light";
+  }
 
   // save to local
   localStorage.setItem("selected-theme", getCurrentTheme());

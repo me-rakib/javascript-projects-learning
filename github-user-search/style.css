@@ -111,6 +111,10 @@ img {
     font-weight: var(--font-regular);
 }
 
+#theme-name {
+    text-transform: uppercase;
+}
+
 #theme-button {
     margin-left: .5rem;
     border: 1px solid var(--text-color);
