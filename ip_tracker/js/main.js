@@ -4,7 +4,8 @@ const showIp = document.getElementById("ip");
 const showLocation = document.getElementById("location");
 const showTimezone = document.getElementById("timezone");
 const showIsp = document.getElementById("isp");
-const BASE_URL = "http://ip-api.com/json/";
+const BASE_URL =
+  "https://ipgeolocation.abstractapi.com/v1/?api_key=16b6bdb2a0664fb086b7da92c362af63";
 
 const up = document.getElementById("up");
 const down = document.getElementById("down");
@@ -45,7 +46,7 @@ window.onload = () => {
 // ===== Send URL with ip address =====
 const sendUserInput = (value) => {
   if (value) {
-    let url = `${BASE_URL}${value}`;
+    let url = `${BASE_URL}&ip_address=${value}`;
     getData(url);
   }
 };
@@ -56,7 +57,6 @@ const getData = (url = BASE_URL) => {
     .get(url)
     .then((data) => {
       storeData(data.data, showData);
-      console.log(data);
     })
     .catch((error) => {
       console.log(error);
@@ -67,12 +67,12 @@ const getData = (url = BASE_URL) => {
 // ===== Store data as object =====
 const storeData = (data, cb) => {
   let datas = {
-    ip: data.query,
-    tz: data.timezone,
-    location: data.city,
-    latitude: data.lat,
-    longitude: data.lon,
-    isp: data.as,
+    ip: data.ip_address,
+    tz: data.timezone.abbreviation,
+    location: data.country,
+    latitude: data.latitude,
+    longitude: data.longitude,
+    isp: data.connection.autonomous_system_organization,
   };
   cb(datas);
 };
