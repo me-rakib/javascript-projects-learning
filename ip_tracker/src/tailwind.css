@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .data-container {
+        @apply w-full h-full text-center flex flex-col items-center md:border-r-2;
+    }
+
+    .input-box {
+        @apply w-full p-3 text-sm bg-white shadow-lg rounded-l-xl sm:w-72 md:w-96 focus:outline-none dark:bg-gray-800 dark:text-gray-200;
+    }
+
+    .data-head {
+        @apply text-gray-500 text-s uppercase dark:text-gray-200;
+    }
+
+    .data-main {
+        @apply font-semibold text-sm dark:text-white;
+    }
+}
+
+@layer utilities {
+    @responsive {
+        .text-s {
+            font-size: 10px;
+            line-height: 18px;
+        }
+    }
+}

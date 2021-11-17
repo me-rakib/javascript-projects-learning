@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+    <!-- ===== Leaflet ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <!-- ===== BOX ICON ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- ===== Tailwind CSS ===== -->
+    <link rel="stylesheet" href="./output/tailwind.css">
+
+    <title>Find your location</title>
+</head>
+
+<body class="h-screen overflow-hidden dark:bg-gray-800">
+
+    <!-- ===== Search ===== -->
+
+    <section class="h-1/4 relative">
+        <img class="h-full w-full object-cover" src="./img/pattern-bg.png">
+
+        <!-- ===== Dark/Night controller ===== -->
+        <i class='bx bxs-moon absolute right-3 top-3 cursor-pointer z-30 dark:text-white' id="theme-button"></i>
+
+        <div class="w-full flex flex-col items-center space-y-3 absolute top-4 z-10">
+            <h1 class="text-white text-2xl font-bold uppercase dark:text-gray-800">IP Address Tracker</h1>
+            <div class="w-80 space-y-3 sm:w-10/12 md:w-9/12 ">
+
+                <!-- ===== Search Box ===== -->
+                <div class="flex justify-center">
+                    <input id="get-ip" class="input-box" placeholder="Search for any IP address or domain">
+                    <button id="search-btn"
+                        class="bg-gray-800 text-white py-2 px-4 rounded-r-xl shadow-lg hover:bg-gray-700 dark:bg-gray-900 dark:hover:bg-gray-700">
+                        <i class='bx bxs-right-arrow'></i>
+                    </button>
+                </div>
+
+                <!-- ===== Down Arrow ===== -->
+                <div class="text-center">
+                    <i class='bx bxs-down-arrow text-white cursor-pointer shadow-lg hidden sm:hidden dark:text-gray-800'
+                        id="down"></i>
+                </div>
+
+                <!-- ===== Information Container ===== -->
+                <div class="py-4 px-2 space-y-3 bg-white rounded-xl flex flex-col items-center shadow-lg sm:flex-row sm:space-y-0 sm:flex dark:bg-gray-800"
+                    id="main-data-container">
+
+                    <div class="data-container">
+                        <p class="data-head">IP Address</p>
+                        <p class="data-main" id="ip"></p>
+                    </div>
+
+                    <div class="data-container">
+                        <p class="data-head">Location</p>
+                        <p class="data-main" id="location"></p>
+                    </div>
+
+                    <div class="data-container">
+                        <p class="data-head">Timezone</p>
+                        <p class="data-main">UTC <span id="timezone"></span></p>
+                    </div>
+
+                    <div class="data-container md:border-r-0">
+                        <p class="data-head">ISP</p>
+                        <p class="data-main" id="isp"></p>
+                    </div>
+
+                    <i class='bx bxs-up-arrow text-gray-800 text-center block cursor-pointer sm:hidden dark:text-white'
+                        id="up"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <section class="h-3/4 z-0" id="map">
+    </section>
+
+    <!-- ===== Leaflet ===== -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <!-- ===== AXIOS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
