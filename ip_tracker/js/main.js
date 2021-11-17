@@ -59,7 +59,7 @@ const getData = (url = BASE_URL) => {
       console.log(data);
     })
     .catch((error) => {
-      // console.log(error);
+      console.log(error);
       alert("Oops! Please recheck ip, there might be slight error.");
     });
 };
