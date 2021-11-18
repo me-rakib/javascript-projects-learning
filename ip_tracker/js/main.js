@@ -7,31 +7,41 @@ const showIsp = document.getElementById("isp");
 const BASE_URL =
   "https://ipgeolocation.abstractapi.com/v1/?api_key=16b6bdb2a0664fb086b7da92c362af63";
 
+const LOCATION_API =
+  "http://www.mapquestapi.com/geocoding/v1/reverse?key=G1D4CXE06niRbk2nSz6SOZAhgdxHLKzc&location=";
+
 const up = document.getElementById("up");
 const down = document.getElementById("down");
 const dataContainer = document.getElementById("main-data-container");
 
+let info;
 let map;
 let marker;
 
 window.onload = () => {
-  getData();
-
-  searchBtn.addEventListener("click", (e) => {
-    sendUserInput(getUserInput.value);
-    getUserInput.value = "";
-  });
-
-  getUserInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      sendUserInput(e.target.value);
-      e.target.value = "";
+  alert("ERROR!! Asynchronous Issue");
+  getData(BASE_URL, storeData);
+  navigator.geolocation.getCurrentPosition(
+    (s) => {
+      let lat = s.coords.latitude;
+      let long = s.coords.longitude;
+      createMap(lat, long);
+      getData(`${LOCATION_API}${lat},${long}`, storeLocation);
+    },
+    (e) => {
+      createMap(info.latitude, info.longitude);
+      getData(
+        `${LOCATION_API}${info.latitude},${info.longitude}`,
+        storeLocation
+      );
     }
-  });
+  );
+};
 
-  // ===== MAP =====
+// ===== Create Map =====
+const createMap = (lat, long) => {
   let mapOptions = {
-    center: [23.7018, 90.3742],
+    center: [lat, long],
     zoom: 12,
   };
   map = new L.map("map", mapOptions);
@@ -39,34 +49,27 @@ window.onload = () => {
     "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   );
   map.addLayer(layer);
-  marker = L.marker([73.7018, 90.3742]);
+  marker = L.marker([lat, long]);
   marker.addTo(map);
 };
 
-// ===== Send URL with ip address =====
-const sendUserInput = (value) => {
-  if (value) {
-    let url = `${BASE_URL}&ip_address=${value}`;
-    getData(url);
-  }
+// ===== Update Map =====
+const updateMap = (lat, long) => {
+  map.flyTo([lat, long], 12);
+  marker.setLatLng([lat, long]).update();
 };
 
-// ===== Fetch data =====
-const getData = (url = BASE_URL) => {
-  axios
-    .get(url)
-    .then((data) => {
-      storeData(data.data, showData);
-    })
-    .catch((error) => {
-      console.log(error);
-      alert("Oops! Please recheck ip, there might be slight error.");
-    });
+// ===== Update data on front page =====
+const showData = (ip, isp, tz, location) => {
+  showIp.innerText = ip;
+  showIsp.innerText = isp;
+  showTimezone.innerText = tz;
+  showLocation.innerText = location;
 };
 
 // ===== Store data as object =====
-const storeData = (data, cb) => {
-  let datas = {
+const storeData = (data) => {
+  info = {
     ip: data.ip_address,
     tz: data.timezone.abbreviation,
     location: data.country,
@@ -74,19 +77,56 @@ const storeData = (data, cb) => {
     longitude: data.longitude,
     isp: data.connection.autonomous_system_organization,
   };
-  cb(datas);
 };
 
-// ===== Update data on front page =====
-const showData = (data) => {
-  showIp.innerText = data.ip;
-  showIsp.innerText = data.isp;
-  showTimezone.innerText = data.tz;
-  showLocation.innerText = data.location;
-
-  map.flyTo([data.latitude, data.longitude], 12);
-  marker.setLatLng([data.latitude, data.longitude]).update();
+const storeLocation = (data) => {
+    street = data.results[0].locations[0].street
+    city = data.results[0].locations[0].adminArea5
+    showData(
+      info.ip,
+      info.isp,
+      info.tz,
+      `${street}, ${city}`
+    );
 };
+
+const getData = (url, cb) => {
+  axios
+    .get(url)
+    .then((data) => {
+      cb(data.data);
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Oops! Please recheck ip, there might be slight error.");
+    });
+};
+
+
+// ===== Send URL with ip address =====
+const sendUserInput = (value) => {
+  if (value) {
+    let url = `${BASE_URL}&ip_address=${value}`;
+    getData(url, storeData);
+    updateMap(info.latitude, info.longitude);
+    getData(
+        `${LOCATION_API}${info.latitude},${info.longitude}`,
+        storeLocation
+      );
+  }
+};
+
+searchBtn.addEventListener("click", (e) => {
+  sendUserInput(getUserInput.value);
+  getUserInput.value = "";
+});
+
+getUserInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    sendUserInput(e.target.value);
+    e.target.value = "";
+  }
+});
 
 // ===== To hide information container =====
 up.addEventListener("click", () => {
