@@ -8,7 +8,7 @@ const BASE_URL =
   "https://ipgeolocation.abstractapi.com/v1/?api_key=16b6bdb2a0664fb086b7da92c362af63";
 
 const LOCATION_API =
-  "http://www.mapquestapi.com/geocoding/v1/reverse?key=G1D4CXE06niRbk2nSz6SOZAhgdxHLKzc&location=";
+  "https://www.mapquestapi.com/geocoding/v1/reverse?key=G1D4CXE06niRbk2nSz6SOZAhgdxHLKzc&location=";
 
 const up = document.getElementById("up");
 const down = document.getElementById("down");
