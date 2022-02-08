@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #23252C;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 317px;
+    background-color: #1A1B21;
+    border-radius: 10px;
+    margin: 44px 0;
+}
+
+.title-container {
+    text-align: center;
+    margin:20px 0;
+}
+
+.title {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.sub-title {
+    color: #F3BF99;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.sub-title-1 {
+    color: #F5F5F5;
+    font-size: 10px;
+}
+
+.home-text {
+    padding: 0 35px;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn {
+    width: 115px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn > img {
+    width: 13px;
+    height: 13px;
+    margin-right: 9.5px;
+}
+
+.btn > p {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-1 {
+    background-color: #fff;
+    margin-right: 17px;
+    border-radius: 6px;
+}
+
+.btn-2 {
+    border-radius: 6px;
+    background-color: #5093E2;
+    color: #fff;
+}
+
+.text-1 {
+    margin-top: 33px;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.text-2 {
+    color: #DCDCDC;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.footer {
+    margin-top: 24px;
+    height: 64px;
+    background-color: #161619;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 24px;
+    border-radius: 0 0 10px 10px;
+}
+
+.footer > img {
+    width: 25px;
+    height: 25px;
+}
