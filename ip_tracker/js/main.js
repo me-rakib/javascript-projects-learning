@@ -79,10 +79,10 @@ const storeData = (data) => {
   };
 };
 
-const storeLocation = (data) => {
+const storeLocation = async (data) => {
     street = data.results[0].locations[0].street
     city = data.results[0].locations[0].adminArea5
-    showData(
+    await showData(
       info.ip,
       info.isp,
       info.tz,
@@ -93,8 +93,9 @@ const storeLocation = (data) => {
 const getData = (url, cb) => {
   axios
     .get(url)
-    .then((data) => {
-      cb(data.data);
+    .then(async (data) => {
+      let d = await data.data
+      cb(d);
     })
     .catch((error) => {
       console.log(error);
